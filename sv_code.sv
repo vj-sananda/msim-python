@@ -8,12 +8,14 @@ module sv_code;
    initial begin
       sv_a = $urandom_range(200);
       sv_b = $urandom_range(200);
-      sv_b = $urandom_range(200);      
+      sv_c = $urandom_range(200);      
 
       $display("SV values are a=%0d b=%0d c=%0d",sv_a, sv_b,sv_c);
       $display("SV passing values to C through DPI");
       $display("");
 
+      SV_run_python_code(sv_a,sv_b,sv_c);
+      
       $finish;
 
    end // initial begin

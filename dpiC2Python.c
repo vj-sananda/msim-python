@@ -6,7 +6,7 @@ void run_python_code(int a, int b, int c) {
 
   py_cmd = (char *)malloc(25*sizeof(char));
 
-  fprintf(stderr,"C values passed through DPI a=%d, b=%d, c=%d\n\n",a,b,c);
+  fprintf(stdout,"C values passed through DPI a=%d, b=%d, c=%d\n\n",a,b,c);
 
   Py_Initialize();
 
